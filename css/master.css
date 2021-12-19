@@ -1,0 +1,203 @@
+/* Credits to the nord theme at <https://nordtheme.com/> */
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Source+Code+Pro&family=Source+Sans+Pro:wght@300&display=swap");
+
+:root {
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c6e;
+  --nord3: #4c566a;
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  --frost0: #8fbcbb;
+  --frost1: #88c0d0;
+  --frost2: #81a1c1;
+  --frost3: #5e81ac;
+  --red: #bf616a;
+  --orange: #d08770;
+  --yellow: #ebcb8b;
+  --green: #a3be8c;
+  --purple: #b48ead;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--nord5);
+  background: var(--nord0);
+}
+
+h1 {
+  font-family: "Raleway";
+  color: var(--nord6);
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding: 100px 20vw;
+}
+
+/* TODO: Make navbar more responsive by pulling it out of view when scrolling a certain amount */
+nav {
+  position: sticky;
+  position: -webkit-sticky;
+  margin: auto;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  width: 50%;
+  top: 0;
+  z-index: 2;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  min-height: 27px;
+  background: var(--nord3);
+}
+
+.navbar-items {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.navbar-items img {
+  vertical-align: middle;
+}
+
+.navbar-items img:hover {
+  filter: contrast(50%);
+}
+
+@media screen and (max-width: 767) {
+  .navbar-items {
+    flex-direction: column;
+  }
+}
+
+nav .pfp {
+  float: left;
+}
+
+nav .url {
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+nav .url:hover {
+  background: var(--frost3);
+}
+
+figure {
+  /* position: relative; */
+  font-style: italic;
+}
+
+.pfp {
+  border-radius: 30%;
+}
+
+.pfp:hover {
+  opacity: 50%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.grid-item {
+  /* TODO: put something here */
+  text-align: center;
+}
+
+.intro {
+  font-size: xx-large;
+  background: var(--nord0);
+  min-height: 600px;
+  padding: 50px 20vw;
+}
+
+.url:link {
+  color: var(--frost3);
+  text-decoration: none;
+  cursor: auto;
+}
+
+.url:hover {
+  color: var(--frost0);
+  text-decoration: underline;
+}
+
+.url:visited {
+  color: var(--purple);
+}
+
+.email {
+  font-family: "Source Code Pro", monospace;
+  font-size: x-large;
+  opacity: 70%;
+  color: var(--red);
+  background: var(--nord3);
+  border-radius: 7px;
+}
+
+.email:hover {
+  color: var(--red);
+  background: #4c566a56;
+  /* opacity: 30%; */
+}
+
+.nord1 {
+  background: var(--nord1);
+}
+
+.nord2 {
+  background: var(--nord2);
+}
+
+.nord3 {
+  background: var(--nord3);
+}
+
+.red {
+  background: var(--red);
+}
+
+.green {
+  background: var(--green);
+}
+
+.wave0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave0 svg {
+  position: relative;
+  display: block;
+  width: calc(109% + 1.3px);
+  height: 114px;
+}
+
+.wave0 .shape-fill {
+  fill: var(--nord0);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .wave0 svg {
+    width: calc(109% + 1.3px);
+    height: 57px;
+  }
+}

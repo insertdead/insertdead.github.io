@@ -1,7 +1,7 @@
-/* Credits to the nord theme at <https://nordtheme.com/> */
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Source+Code+Pro&family=Source+Sans+Pro:wght@300&display=swap");
 
 :root {
+    /* Credits to the nord theme at <https://nordtheme.com/> */
   --nord0: #2e3440;
   --nord1: #3b4252;
   --nord2: #434c6e;
@@ -56,7 +56,7 @@ nav {
   padding-right: 2vw;
   padding-left: 2vw;
   min-height: 27px;
-  background: var(--nord3);
+  background: #4c566abf;
 }
 
 .navbar-items {
@@ -96,6 +96,12 @@ nav .url:hover {
 figure {
   /* position: relative; */
   font-style: italic;
+}
+
+footer {
+    position: relative;
+    font-size: small;
+    background: var(--frost3);
 }
 
 .pfp {
@@ -162,6 +168,10 @@ figure {
   background: var(--nord2);
 }
 
+.frost3 {
+    background: var(--frost3);
+}
+
 .nord3 {
   background: var(--nord3);
 }
@@ -200,4 +210,47 @@ figure {
     width: calc(109% + 1.3px);
     height: 57px;
   }
+}
+
+.wave1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave1 svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 85px;
+    transform: rotateY(180deg);
+}
+
+.wave1 .shape-fill {
+    fill: #3B4252;
+}
+
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    left:auto 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 48px;
+    transform: rotateY(180deg);
+}
+
+.wave2 .shape-fill {
+    fill: #5E81AC;
 }

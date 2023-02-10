@@ -104,6 +104,10 @@ footer {
     background: var(--frost3);
 }
 
+footer .url:link {
+  color: var(--nord0);
+}
+
 .pfp {
   border-radius: 30%;
 }
